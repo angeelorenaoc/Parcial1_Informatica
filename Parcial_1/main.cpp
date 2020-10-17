@@ -1,4 +1,5 @@
 #include <iostream>
+#include <math.h>
 
 using namespace std;
 
@@ -29,6 +30,8 @@ int main()
     switch (opcion) {
         case 0:{break;}
         case 1:{
+            int vi=0, t = 0,vf=0;
+
 
         }break;
         case 2:{

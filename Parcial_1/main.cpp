@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    float xa=0,xe,ya,ye,anga,ange;
+    float xa=0,xe,ya,ye,anga,ange,pi=3.1416;
     int  opcion=1;
     cout << "El programa definira las coordenadas de impacto de las balas." << endl;
     cout << "Posicion en y del canion amigo: " << endl;
@@ -22,20 +22,21 @@ int main()
         cout << "1.Generar disparos ofensivos que comprometan la integridad del canion defensivo." << endl;
         cout << "2.Generar disparos defensivos que comprometan la integridad del canion ofensivo." << endl;
         cout << "3.Dado un disparo ofensivo, generar (al menos tres) disparos defensivos que impida que el ";
-        cout<<"canion defensivo sea destruido sin importar si el cañón ofensivo pueda ser destruido." << endl;
+        cout<<"canion defensivo sea destruido sin importar si el canion ofensivo pueda ser destruido." << endl;
         cout << "4.Dado un disparo ofensivo, generar (al emnos tres) disparo defensivos que impidan que los";
         cout << "caniones defensivo y ofensivo puedan ser destruidos." << endl;
-        cout << "Elija la opción o 0 para salir:" << endl;
+        cout << "Elija la opcion o 0 para salir:" << endl;
         cin >> opcion;
         switch (opcion) {
             case 0:{break;}
             case 1:{
                 xe = xe - (0.05*xe);
                 ye = ye - (0.05*ye);
-                float vi=0, t = 0,vf=0;
-                t = sqrt((ye-(xe*tan (anga)))/-4.9);
-                vi = xe / (cos(anga)*t);
-                vf = (vi*sin(anga))-(9.8*t);
+                float vi=0, t = 0,vf=0, angra = 0;
+                angra = (anga*pi)/180;
+                t = sqrt((ye-ya-(xe*tan (angra)))/-4.9);
+                vi = xe / (cos(angra)*t);
+                vf = (vi*sin(angra))-(9.8*t);
                 cout << "La bala impactara el canion defensivo si se lanza con una velocidad inicial: "<< vi << endl;
                 cout << "Y el tiempo en el que explotara la bala es:" << t << " .Y su velocidad final sera: " << vf;
             }break;

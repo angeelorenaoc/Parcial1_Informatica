@@ -38,10 +38,16 @@ int main()
                 vi = xe / (cos(angra)*t);
                 vf = (vi*sin(angra))-(9.8*t);
                 cout << "La bala impactara el canion defensivo si se lanza con una velocidad inicial: "<< vi << endl;
-                cout << "Y el tiempo en el que explotara la bala es:" << t << " .Y su velocidad final sera: " << vf;
+                cout << "Y el tiempo en el que explotara la bala es:" << t << " .Y su velocidad final sera: " << vf<< endl;
             }break;
             case 2:{
-
+            float vi=0, t = 0,vf=0, angra = 0;
+            angra = (anga*pi)/180;
+            t = sqrt((-ye+ya+(xe*tan (angra)))/4.9);
+            vi = -xe / (cos(angra)*t);
+            vf = (vi*sin(angra))+(9.8*t);
+            cout << "La bala impactara el canion defensivo si se lanza con una velocidad inicial: "<< vi << endl;
+            cout << "Y el tiempo en el que explotara la bala es:" << t << " .Y su velocidad final sera: " << vf<< endl;
             }break;
             case 3:{
 

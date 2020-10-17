@@ -39,6 +39,7 @@ int main()
                 vf = (vi*sin(angra))-(9.8*t);
                 cout << "La bala impactara el canion defensivo si se lanza con una velocidad inicial: "<< vi << endl;
                 cout << "Y el tiempo en el que explotara la bala es:" << t << " .Y su velocidad final sera: " << vf<< endl;
+                cout << "Recuerde que el signo de la velocidad solo indica la direccion." << endl << endl;
             }break;
             case 2:{
             float vi=0, t = 0,vf=0, angra = 0;
@@ -48,6 +49,7 @@ int main()
             vf = (vi*sin(angra))+(9.8*t);
             cout << "La bala impactara el canion defensivo si se lanza con una velocidad inicial: "<< vi << endl;
             cout << "Y el tiempo en el que explotara la bala es:" << t << " .Y su velocidad final sera: " << vf<< endl;
+            cout << "Recuerde que el signo de la velocidad solo indica la direccion." << endl << endl;
             }break;
             case 3:{
 

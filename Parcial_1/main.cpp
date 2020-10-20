@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    float xa=0,xe,ya,ye,anga,ange,pi=3.1416;
+    float xa=0,xe,ya,ye,anga=90,ange=90,pi=3.1416;
     int  opcion=1;
     cout << "El programa definira las coordenadas de impacto de las balas." << endl;
     cout << "Posicion en y del canion ofensivo: " << endl;
@@ -27,8 +27,11 @@ int main()
             case 0:{break;}
             case 1:{
                 for (int i = 0; i < 3; i++){
-                    cout << "Angulo sobre la horizontal del canion ofensivo: " << endl;
-                    cin >> anga;
+                    while (anga == 90){
+                       cout << "El angulo que va a ingresar debe ser menor a 90 grados." << endl;
+                       cout << "Angulo sobre la horizontal del canion ofensivo: " << endl;
+                       cin >> anga;
+                    }
                     xe = xe - (0.05*xe);
                     ye = ye - (0.05*ye);
                     float vi=0, t = 0,vf=0, angra = 0;
@@ -38,13 +41,17 @@ int main()
                     vf = (vi*sin(angra))-(9.8*t);
                     cout << "La bala impactara el canion defensivo si se lanza con una velocidad inicial: "<< vi << endl;
                     cout << "Y el tiempo en el que explotara la bala es:" << t << " .Y su velocidad final sera: " << vf<< endl;
+                    anga = 90;
                 }
                 cout << "Recuerde que el signo de la velocidad solo indica la direccion." << endl << endl;
             }break;
             case 2:{
             for (int i = 0; i < 3; i++){
-                cout << "Angulo sobre la horizontal del canion defensivo: " << endl;
-                cin >> ange;
+                while (ange == 90){
+                    cout << "El angulo que va a ingresar debe ser menor a 90 grados." << endl;
+                    cout << "Angulo sobre la horizontal del canion defensivo: " << endl;
+                    cin >> ange;
+                }
                 float vi=0, t = 0,vf=0, angra = 0;
                 angra = (ange*pi)/180;
                 cout << angra << endl;
@@ -53,6 +60,7 @@ int main()
                 vf = (vi*sin(angra))+(9.8*t);
                 cout << "La bala impactara el canion defensivo si se lanza con una velocidad inicial: "<< vi << endl;
                 cout << "Y el tiempo en el que explotara la bala es:" << t << " .Y su velocidad final sera: " << vf<< endl;
+                ange =90;
             }
             cout << "Recuerde que el signo de la velocidad solo indica la direccion." << endl << endl;
             }break;

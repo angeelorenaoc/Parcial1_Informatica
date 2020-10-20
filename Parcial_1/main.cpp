@@ -46,7 +46,8 @@ int main()
                 cout << "Angulo sobre la horizontal del canion defensivo: " << endl;
                 cin >> ange;
                 float vi=0, t = 0,vf=0, angra = 0;
-                angra = (anga*pi)/180;
+                angra = (ange*pi)/180;
+                cout << angra << endl;
                 t = sqrt((-ye+ya+(xe*tan (angra)))/4.9);
                 vi = -xe / (cos(angra)*t);
                 vf = (vi*sin(angra))+(9.8*t);
